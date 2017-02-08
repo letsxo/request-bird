@@ -20,7 +20,7 @@ var promisifiedVerbFuncWithData = function(verb) {
     params.method = method;
 
     if (typeof data !== 'undefined') {
-      params.body = JSON.stringify(data);
+      params.body = data;
       params.json = true;
     }
 
