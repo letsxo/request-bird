@@ -1,7 +1,7 @@
 # Promisified request
 
 This packages is a wrapper around the [request](https://github.com/request/request) library.
-We are using [bluebird](http://bluebirdjs.com/docs/getting-started.html) from promisification.
+We are using [bluebird](http://bluebirdjs.com/docs/getting-started.html) for promisification.
 
 ## Installation
 
