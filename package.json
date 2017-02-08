@@ -1,15 +1,25 @@
 {
   "name": "request-bird",
-  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/letsxo/request-bird"
+  },
+  "version": "0.0.2",
   "description": "Promisified request library",
   "main": "index.js",
   "scripts": {
     "test": "mocha test/*.js"
   },
   "keywords": [
-    "request"
+    "request",
+    "bluebird",
+    "promise"
   ],
-  "author": "Tibor Ujlaky",
+  "author": {
+    "name": "letsxo",
+    "email": "npm@letsxo.com",
+    "url": "https://letsxo.com"
+  },
   "license": "ISC",
   "peerDependencies": {
     "bluebird": "^3.4.7",
