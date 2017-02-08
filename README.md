@@ -13,6 +13,23 @@ npm install request bluebird request-bird
 
 ### GET
 
+If you just want a GET request you can do that in the following way:
+
+```
+var request = require('request-bird');
+
+request('http://test.com')
+  .then(function(response) {
+    
+  })
+  .catch(function(err) {
+
+  });
+
+```
+
+Or you can use the get function:
+
 ```
 var request = require('request-bird');
 
