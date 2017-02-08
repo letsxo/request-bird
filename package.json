@@ -1,0 +1,23 @@
+{
+  "name": "request-bird",
+  "version": "0.0.1",
+  "description": "Promisified request library",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/*.js"
+  },
+  "keywords": [
+    "request"
+  ],
+  "author": "Tibor Ujlaky",
+  "license": "ISC",
+  "peerDependencies": {
+    "bluebird": "^3.4.7",
+    "request": "^2.79.0"
+  },
+  "devDependencies": {
+    "mocha": "^3.2.0",
+    "should": "^11.2.0",
+    "sinon": "^1.17.7"
+  }
+}
