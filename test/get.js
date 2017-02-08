@@ -8,8 +8,6 @@ describe('Request GET', function() {
 
   beforeEach(function(done) {
     var stub = sinon.stub(oldRequest, 'Request', function(options) {
-      options.method.should.eql('GET');
-
       if (options.uri === 'http://test.com') {
         options.callback(null, {
           test: true
@@ -25,6 +23,16 @@ describe('Request GET', function() {
   afterEach(function(done) {
     oldRequest.Request.restore();
     done();
+  });
+
+  it('should do a get without function', function(done) {
+    request('http://test.com')
+      .then(function(response) {
+        response.should.instanceOf(Object).and.have.property('test', true);
+
+        done();
+      })
+      .catch(done);
   });
 
   it('should get an URL', function(done) {

@@ -10,7 +10,7 @@ describe('Request PATCH', function() {
     var stub = sinon.stub(oldRequest, 'Request', function(options) {
       options.method.should.eql('PATCH');
       options.json.should.eql(true);
-      options.body.should.eql('{"test":5}');
+      options.body.should.eql({test: 5});
 
       if (options.uri === 'http://test.com') {
         options.callback(null, {

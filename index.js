@@ -28,10 +28,16 @@ var promisifiedVerbFuncWithData = function(verb) {
   };
 };
 
-exports.get = promisifiedVerbFunc('get');
-exports.head = promisifiedVerbFunc('head');
-exports.post = promisifiedVerbFuncWithData('post');
-exports.put = promisifiedVerbFuncWithData('put');
-exports.patch = promisifiedVerbFuncWithData('patch');
-exports.del = promisifiedVerbFunc('delete');
-exports['delete'] = promisifiedVerbFunc('delete');
+var requestBird = function(uri, options) {
+  return request(uri, options);
+};
+
+requestBird.get = promisifiedVerbFunc('get');
+requestBird.head = promisifiedVerbFunc('head');
+requestBird.post = promisifiedVerbFuncWithData('post');
+requestBird.put = promisifiedVerbFuncWithData('put');
+requestBird.patch = promisifiedVerbFuncWithData('patch');
+requestBird.del = promisifiedVerbFunc('delete');
+requestBird['delete'] = promisifiedVerbFunc('delete');
+
+module.exports = requestBird;
